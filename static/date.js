@@ -53,7 +53,7 @@ $.getJSON("data/timeline.json", function (total) {
             series: [{
                 name: "Total Landslides",
                 data: total
-            },{
+            }, {
                 name: "Tota Deaths",
                 data: deaths
             }],

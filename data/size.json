@@ -1,1 +1,20 @@
-{"keys": ["Large", "Small", "Medium", "Unknown", "Very Large", "Unkown", "Catastrophic"], "values": [750, 2767, 6551, 851, 102, 9, 3]}
+{
+    "keys": [
+        "Large",
+        "Small",
+        "Medium",
+        "Unknown",
+        "Very Large",
+        "Unkown",
+        "Catastrophic"
+    ],
+    "values": [
+        750,
+        2767,
+        6551,
+        851,
+        102,
+        9,
+        3
+    ]
+}

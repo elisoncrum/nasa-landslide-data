@@ -1,6 +1,6 @@
 // Build the chart
 $.getJSON("data/trigger.json", function (data) {
-    
+
     Highcharts.chart('triggers', {
         chart: {
             plotBackgroundColor: null,
