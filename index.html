@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>A Basic HTML5 Template</title>
+    <meta name="description" content="A simple HTML5 Template for new projects.">
+    <meta name="author" content="SitePoint">
+
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div id="world-map"></div>
+            </div>
+            <div class="col-6">
+                <div id="triggers"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div id="spider"></div>
+            </div>
+            <div class="col-8">
+                <div id="timeline"></div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h2 id="global-landslide-catalog-export">Global Landslide Catalog Export</h2>
+                <p>The Global Landslide Catalog (GLC) was developed with the goal of identifying rainfall-triggered
+                    landslide events around the world, regardless of size, impacts or location. The GLC considers all
+                    types of mass movements triggered by rainfall, which have been reported in the media, disaster
+                    databases, scientific reports, or other sources. The GLC has been compiled since 2007 at NASA
+                    Goddard Space Flight Center. This is a unique data set with the ID tag “GLC” in the landslide
+                    editor.</p>
+                <p>This dataset on data.nasa.gov was a one-time export from the Global Landslide Catalog maintained
+                    separately. It is current as of March 7, 2016.</p>
+                <p>Public: This dataset is intended for public access and use. </p>
+                <p>License: No license information was provided. If this work was prepared by an officer or employee of
+                    the United States government as part of that person&#39;s official duties it is considered a U.S.
+                    Government Work. </p>
+                
+                    https://catalog.data.gov/dataset/global-landslide-catalog-export
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="static/map.js"></script>
+<script type="text/javascript" src="static/trigger.js"></script>
+<script type="text/javascript" src="static/date.js"></script>
+<script type="text/javascript" src="static/spider.js"></script>
+
+</html>
