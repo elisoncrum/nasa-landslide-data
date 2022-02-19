@@ -8,9 +8,15 @@ TIMEFORMAT = '%m/%d/%Y %I:%M:%S %p'
 count_by_country = {}
 count_by_trigger = {}
 total_by_year = {}
-
 count_by_size = {}
 
+heatmap = {}
+
+timeline = {
+    "total":{},
+    "deaths": {},
+    "trigger": {}
+}
 with open(FILENAME, 'r', encoding="utf8") as stream:
     reader = csv.DictReader(stream)
 
@@ -43,12 +49,34 @@ with open(FILENAME, 'r', encoding="utf8") as stream:
 
         if row["fatality_count"]:
             total_by_year[YEAR]["deaths"] += int(row["fatality_count"])
-
+        
         if not size: size = "Unkown"
         if size in count_by_size:
             count_by_size[size] += 1
         else:
             count_by_size[size] = 1
+        
+        DAY_TO_YEAR = date.timetuple().tm_yday
+        MONTH_DAY = date.strftime("%m-%d")
+        _date = datetime.strptime("2000-{}-{}".format(date.month, date.day), "%Y-%m-%d")
+        y = _date.weekday()
+        x = _date.isocalendar().week
+
+        if (x, y) in heatmap:
+            heatmap[(x, y)] += 1
+        else:
+            heatmap[(x, y)] = 1
+        #if row["longitude"] and row["latitude"] and row["event_title"]:
+        #    lat_long_stat.append(
+        #        {
+        #            "name": row["event_title"],
+        #            "lat": float(row["latitude"]),
+        #            "lon": float(row["longitude"])
+        #        }
+        #    )
+
+heatmap = [[k[0], k[1], v] for k, v in heatmap.items()]
+print(heatmap)
 
 
 count_by_country = [ {"name": x, "value": v} for x, v in count_by_country.items()]
@@ -78,3 +106,9 @@ with open('data/timeline-deaths.json', 'w') as outfile:
 
 with open('data/size.json', 'w') as outfile:
     json.dump(count_by_size, outfile)
+
+with open('data/heatmap.json', 'w') as outfile:
+    json.dump(heatmap, outfile)
+
+#with open('data/coords.json', 'w') as outfile:
+#    json.dump(lat_long_stat, outfile)

@@ -17,6 +17,11 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/gb/gb-all.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world-palestine-highres.js"></script>
+
     <script src="https://d3js.org/topojson.v2.min.js"></script>
 
 
@@ -29,22 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <div id="world-map"></div>
-            </div>
-            <div class="col-6">
-                <div id="triggers"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <div id="spider"></div>
-            </div>
-            <div class="col-8">
-                <div id="timeline"></div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-8">
+                
                 <h2 id="global-landslide-catalog-export">Global Landslide Catalog Export</h2>
                 <p>The Global Landslide Catalog (GLC) was developed with the goal of identifying rainfall-triggered
                     landslide events around the world, regardless of size, impacts or location. The GLC considers all
@@ -60,8 +50,27 @@
                     Government Work. </p>
 
                 https://catalog.data.gov/dataset/global-landslide-catalog-export
-
             </div>
+            <div class="col-6">
+                <div id="world-map"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div id="spider"></div>
+            </div>
+            <div class="col-8">
+                <div id="timeline"></div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div id="heatmap"></div>
+            </div>
+            <div class="col-4">
+                <div id="triggers"></div>
+            </div>
+        </div>
         </div>
     </div>
 </body>
@@ -70,5 +79,6 @@
 <script type="text/javascript" src="static/trigger.js"></script>
 <script type="text/javascript" src="static/date.js"></script>
 <script type="text/javascript" src="static/spider.js"></script>
+<script type="text/javascript" src="static/heatmap.js"></script>
 
 </html>

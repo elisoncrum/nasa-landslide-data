@@ -11,7 +11,8 @@ $.getJSON("data/timeline.json", function (total) {
 
         Highcharts.chart('timeline', {
             chart: {
-                type: 'spline'
+                type: 'spline',
+                zoomType: 'x',
             },
             title: {
                 text: 'Documented Land Slides 1988 - 2017'
